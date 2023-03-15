@@ -16,8 +16,8 @@
 
 # Report all the statistics and the mutation score for each test class
 
-<img width="651" alt="image" src="https://user-images.githubusercontent.com/98235387/225167483-8bf04624-6bfa-4cad-a149-9155c3b70295.png">
-<img width="635" alt="image" src="https://user-images.githubusercontent.com/98235387/225167592-bffe104a-636f-4952-b16a-b98677f100ad.png">
+<img width="608" alt="image" src="https://user-images.githubusercontent.com/98235387/225173831-b920ced6-33ec-4e92-8bef-07d1a13d7eda.png">
+
 
 
 # Analysis drawn on the effectiveness of each of the test classes
