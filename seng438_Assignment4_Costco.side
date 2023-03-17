@@ -1,0 +1,590 @@
+{
+  "id": "b2a71dd1-3c1a-459f-a47e-c56634052893",
+  "version": "2.0",
+  "name": "seng438_Assignment4_Costco",
+  "url": "https://www.costco.ca/",
+  "tests": [{
+    "id": "d7e5fdcf-f017-49d1-a593-30fd926376b4",
+    "name": "testLoginInvalidUser",
+    "commands": [{
+      "id": "7382b947-4d89-44a6-b17e-b704071581a4",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.costco.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "09c88caf-1f12-41a5-bf3a-e68f802d94f5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x926",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4f326358-48a9-4915-9e40-3688f92ee5de",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=header_sign_in",
+      "targets": [],
+      "value": "Sign In / Register"
+    }, {
+      "id": "a032ded2-e25f-45e5-acf6-a5abe5927ea2",
+      "comment": "",
+      "command": "click",
+      "target": "id=header_sign_in",
+      "targets": [
+        ["id=header_sign_in", "id"],
+        ["linkText=Sign In / Register", "linkText"],
+        ["css=#header_sign_in", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign In / Register')]", "xpath:link"],
+        ["xpath=//a[@id='header_sign_in']", "xpath:attributes"],
+        ["xpath=//header[@id='header-widget']/div[2]/div/div/div/div[2]/div/div[4]/nav/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www.costco.ca/LogonForm')])[2]", "xpath:href"],
+        ["xpath=//div[4]/nav/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign In / Register')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3aa2e008-6b5b-4b8e-abe0-e52c75766da2",
+      "comment": "",
+      "command": "type",
+      "target": "id=signInName",
+      "targets": [
+        ["id=signInName", "id"],
+        ["name=Sign in name", "name"],
+        ["css=#signInName", "css:finder"],
+        ["xpath=//input[@id='signInName']", "xpath:attributes"],
+        ["xpath=//form[@id='localAccountForm']/div[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "arionghamel@gmail.com"
+    }, {
+      "id": "58ffb872-24f9-4b36-a4c7-48ad8caecdc3",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=Password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='localAccountForm']/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "invalidPassw0rd!"
+    }, {
+      "id": "753be1ff-d584-476a-815d-fb40f307d454",
+      "comment": "",
+      "command": "click",
+      "target": "id=next",
+      "targets": [
+        ["id=next", "id"],
+        ["css=#next", "css:finder"],
+        ["xpath=//button[@id='next']", "xpath:attributes"],
+        ["xpath=//form[@id='localAccountForm']/div[3]/div[5]/button", "xpath:idRelative"],
+        ["xpath=//div[5]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "af49cb3f-8b66-47ba-a11a-f27cea6d94ae",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Sign In | Costco",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7a0327c7-0355-4381-8a1f-26211aaffde0",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "8096418f-d6f5-4050-b417-03dc5a3c1c9f",
+    "name": "testFindLocalWarehousesCalgary",
+    "commands": [{
+      "id": "f490007a-dbb7-4ca4-8bba-8662f6f1b202",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.costco.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2755ad89-6645-458f-9083-a3847c13ef79",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x926",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dc5fb128-66ff-44bf-a941-0ff2ec7ac70b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Locations",
+      "targets": [
+        ["linkText=Locations", "linkText"],
+        ["css=.nav-item:nth-child(22) > .nav-flyout", "css:finder"],
+        ["xpath=(//a[contains(text(),'Locations')])[2]", "xpath:link"],
+        ["xpath=//div[@id='navigation-widget']/div/nav/div[11]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/warehouse-locations?langId=-24&storeId=10302&catalogId=11201')])[2]", "xpath:href"],
+        ["xpath=//div[11]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "db5d763e-5b94-4466-b3cc-f109943c7b09",
+      "comment": "",
+      "command": "click",
+      "target": "id=search-warehouse",
+      "targets": [
+        ["id=search-warehouse", "id"],
+        ["name=search_warehouse", "name"],
+        ["css=#search-warehouse", "css:finder"],
+        ["xpath=//input[@id='search-warehouse']", "xpath:attributes"],
+        ["xpath=//div[@id='search-warehouse-container']/input", "xpath:idRelative"],
+        ["xpath=//form/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e5c38afa-1e7b-45c6-b414-165d73b35c41",
+      "comment": "",
+      "command": "type",
+      "target": "id=search-warehouse",
+      "targets": [
+        ["id=search-warehouse", "id"],
+        ["name=search_warehouse", "name"],
+        ["css=#search-warehouse", "css:finder"],
+        ["xpath=//input[@id='search-warehouse']", "xpath:attributes"],
+        ["xpath=//div[@id='search-warehouse-container']/input", "xpath:idRelative"],
+        ["xpath=//form/div/div/input", "xpath:position"]
+      ],
+      "value": "Calgary Alberta"
+    }, {
+      "id": "2b305684-29c7-4289-9e85-6a9e8ba5fffa",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=search-warehouse",
+      "targets": [
+        ["id=search-warehouse", "id"],
+        ["name=search_warehouse", "name"],
+        ["css=#search-warehouse", "css:finder"],
+        ["xpath=//input[@id='search-warehouse']", "xpath:attributes"],
+        ["xpath=//div[@id='search-warehouse-container']/input", "xpath:idRelative"],
+        ["xpath=//form/div/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "51dd1819-a7cd-489b-8ae1-54efa0bbe682",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Store Details",
+      "targets": [
+        ["linkText=Store Details", "linkText"],
+        ["css=.row:nth-child(2) li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Store Details')]", "xpath:link"],
+        ["xpath=//table[@id='warehouse-list']/tr/td[2]/div[2]/div[2]/div/div/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/warehouse-locations/n-calgary-calgary-ab-56.html')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Store Details')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2fd66250-27ba-4aec-866f-7321614f4828",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "N calgary Calgary, AB Warehouse | Costco",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cff91a6c-3061-4a87-8af2-e8bc1f881d07",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "41badbfb-d6c1-46b1-895c-b25e6df10417",
+    "name": "testLoginValidUser",
+    "commands": [{
+      "id": "5e4c6ac6-8917-4266-8e2e-de6b30a8e59d",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.costco.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed6f9a9e-05e5-4016-add2-2d6100adae55",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x926",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e9c31f4c-2c99-408b-9126-7d8c13c47232",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=header_sign_in",
+      "targets": [],
+      "value": "Sign In / Register"
+    }, {
+      "id": "21640f5f-7517-4fc0-9ebe-b86c9b69e28b",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=header_sign_in",
+      "targets": [
+        ["id=header_sign_in", "id"],
+        ["linkText=Sign In / Register", "linkText"],
+        ["css=#header_sign_in", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign In / Register')]", "xpath:link"],
+        ["xpath=//a[@id='header_sign_in']", "xpath:attributes"],
+        ["xpath=//header[@id='header-widget']/div[2]/div/div/div/div[2]/div/div[4]/nav/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www.costco.ca/LogonForm')])[2]", "xpath:href"],
+        ["xpath=//div[4]/nav/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign In / Register')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ead46a2-0b33-427e-9155-eea6391ae5f4",
+      "comment": "",
+      "command": "click",
+      "target": "id=header_sign_in",
+      "targets": [
+        ["id=header_sign_in", "id"],
+        ["linkText=Sign In / Register", "linkText"],
+        ["css=#header_sign_in", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign In / Register')]", "xpath:link"],
+        ["xpath=//a[@id='header_sign_in']", "xpath:attributes"],
+        ["xpath=//header[@id='header-widget']/div[2]/div/div/div/div[2]/div/div[4]/nav/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www.costco.ca/LogonForm')])[2]", "xpath:href"],
+        ["xpath=//div[4]/nav/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign In / Register')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4b1793a-ce2b-4c82-a841-09013a058bbd",
+      "comment": "",
+      "command": "type",
+      "target": "id=signInName",
+      "targets": [
+        ["id=signInName", "id"],
+        ["name=Sign in name", "name"],
+        ["css=#signInName", "css:finder"],
+        ["xpath=//input[@id='signInName']", "xpath:attributes"],
+        ["xpath=//form[@id='localAccountForm']/div[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "arionghamel@gmail.com"
+    }, {
+      "id": "f63cdde2-1921-4824-bc84-f61c60e749c8",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=Password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='localAccountForm']/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "Test1ng!"
+    }, {
+      "id": "6e44df6d-6433-487e-9314-27d20cfa5821",
+      "comment": "",
+      "command": "click",
+      "target": "id=signInName",
+      "targets": [
+        ["id=signInName", "id"],
+        ["name=Sign in name", "name"],
+        ["css=#signInName", "css:finder"],
+        ["xpath=//input[@id='signInName']", "xpath:attributes"],
+        ["xpath=//form[@id='localAccountForm']/div[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "02f268e7-7d6b-41be-8c40-f0922c7f8b41",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rememberMe",
+      "targets": [
+        ["css=.rememberMe", "css:finder"],
+        ["xpath=//form[@id='localAccountForm']/div[3]/div[4]", "xpath:idRelative"],
+        ["xpath=//div[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "64e9cd07-5fcb-4bc6-839e-ce33a10576b1",
+      "comment": "",
+      "command": "click",
+      "target": "id=next",
+      "targets": [
+        ["id=next", "id"],
+        ["css=#next", "css:finder"],
+        ["xpath=//button[@id='next']", "xpath:attributes"],
+        ["xpath=//form[@id='localAccountForm']/div[3]/div[5]/button", "xpath:idRelative"],
+        ["xpath=//div[5]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "166572e0-d8f9-4996-ac5c-d888b7419ded",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,368)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4cc67ba7-f079-4591-842e-c186fd763613",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group > .tertiary",
+      "targets": [
+        ["css=.form-group > .tertiary", "css:finder"],
+        ["xpath=//input[@value='Browse as Non-Member']", "xpath:attributes"],
+        ["xpath=//div[@id='link-membership-interrupt']/div[2]/div/div/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d188cbdf-627b-43cb-ae9d-2df404f9e954",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Welcome to Costco Wholesale",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "84d60947-f77c-4897-aaac-6f1f6b4b8524",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "739bf7e5-6467-411b-8315-88576799c69a",
+    "name": "testSignOut",
+    "commands": [{
+      "id": "d59f2e43-599f-4f3a-bc2f-c66c26a46159",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.costco.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "15634827-5dce-43dc-ad5a-eac1bd7d0d36",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x926",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1b7b733e-2666-45cd-a4a0-f9d03abb6de8",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=myaccount-react-d",
+      "targets": [],
+      "value": "Account"
+    }, {
+      "id": "1a26b87d-fcab-498d-b638-155170b99799",
+      "comment": "",
+      "command": "click",
+      "target": "id=myaccount-react-d",
+      "targets": [
+        ["id=myaccount-react-d", "id"],
+        ["css=#myaccount-react-d", "css:finder"],
+        ["xpath=//button[@id='myaccount-react-d']", "xpath:attributes"],
+        ["xpath=//header[@id='header-widget']/div[2]/div/div/div/div[2]/div/div[4]/nav/ul/li/button", "xpath:idRelative"],
+        ["xpath=//li/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "085899fe-20fd-4c69-87d7-a5dfb1619819",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-1ljkbn6",
+      "targets": [
+        ["css=.css-1ljkbn6", "css:finder"],
+        ["xpath=//li[@id='mi_signout']/a/span", "xpath:idRelative"],
+        ["xpath=//li[9]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign Out')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win7590",
+      "windowTimeout": 2000
+    }, {
+      "id": "2e0d2683-abdf-43b2-a15b-ea07a1bceaee",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa2f1ed6-8190-4ad4-acc7-807e95352477",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win7590}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "25bea9f3-4b97-4c4d-9a60-098fbc61663a",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fb98415c-4325-4e69-8020-496138b0550b",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win7590}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "41599e90-1cbc-41ba-b194-84a01b1e8516",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f87be060-7eed-4b93-a93b-4dd342ee536e",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "197f075d-655c-41ff-a159-3eb7e8c030e3",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Welcome to Costco Wholesale",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6d6b3c3b-01e1-40ab-8e99-dbbb41b8d9b1",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "5ec9b51c-c68d-4d6f-b077-57b6814676d1",
+    "name": "testFindLocalWarehousesToronto",
+    "commands": [{
+      "id": "0119a5e9-0007-4d6b-a4ff-b7a028a3ee79",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.costco.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9e3d092c-81bb-4cda-8101-84df83c6edaa",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x926",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "62adaf77-b6bb-4991-bec9-d0870799ac8d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Locations",
+      "targets": [
+        ["linkText=Locations", "linkText"],
+        ["css=.nav-item:nth-child(22) > .nav-flyout", "css:finder"],
+        ["xpath=(//a[contains(text(),'Locations')])[2]", "xpath:link"],
+        ["xpath=//div[@id='navigation-widget']/div/nav/div[11]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/warehouse-locations?langId=-24&storeId=10302&catalogId=11201')])[2]", "xpath:href"],
+        ["xpath=//div[11]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2a2e57f-5842-4f71-b811-310b89abf520",
+      "comment": "",
+      "command": "click",
+      "target": "id=search-warehouse",
+      "targets": [
+        ["id=search-warehouse", "id"],
+        ["name=search_warehouse", "name"],
+        ["css=#search-warehouse", "css:finder"],
+        ["xpath=//input[@id='search-warehouse']", "xpath:attributes"],
+        ["xpath=//div[@id='search-warehouse-container']/input", "xpath:idRelative"],
+        ["xpath=//form/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b58cbe7-7a14-4b41-9b29-308c95622f7d",
+      "comment": "",
+      "command": "type",
+      "target": "id=search-warehouse",
+      "targets": [
+        ["id=search-warehouse", "id"],
+        ["name=search_warehouse", "name"],
+        ["css=#search-warehouse", "css:finder"],
+        ["xpath=//input[@id='search-warehouse']", "xpath:attributes"],
+        ["xpath=//div[@id='search-warehouse-container']/input", "xpath:idRelative"],
+        ["xpath=//form/div/div/input", "xpath:position"]
+      ],
+      "value": "Toronto Ontario"
+    }, {
+      "id": "db9473de-9ba8-4b15-9c04-74039f3eb3ab",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=search-warehouse",
+      "targets": [
+        ["id=search-warehouse", "id"],
+        ["name=search_warehouse", "name"],
+        ["css=#search-warehouse", "css:finder"],
+        ["xpath=//input[@id='search-warehouse']", "xpath:attributes"],
+        ["xpath=//div[@id='search-warehouse-container']/input", "xpath:idRelative"],
+        ["xpath=//form/div/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "be6342ee-252a-4136-8dcd-19360eac22c4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Store Details",
+      "targets": [
+        ["linkText=Store Details", "linkText"],
+        ["css=.warehouse:nth-child(1) li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Store Details')]", "xpath:link"],
+        ["xpath=//table[@id='warehouse-list']/tr/td[2]/div/div[2]/div/div/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/warehouse-locations/thorncliffe-park-toronto-on-1316.html')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Store Details')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "803bfe4c-503c-4b46-9ad6-a4c9eec6e624",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Thorncliffe park Toronto, ON Warehouse | Costco",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3e3f4594-8bbc-428d-825a-4e44e87012b4",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "040681de-b882-45ad-af6d-8f53116eda28",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["d7e5fdcf-f017-49d1-a593-30fd926376b4"]
+  }],
+  "urls": ["https://www.costco.ca/"],
+  "plugins": []
+}

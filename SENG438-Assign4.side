@@ -1,0 +1,407 @@
+{
+  "id": "c3fb59a2-f666-4d04-a94d-b48113924f00",
+  "version": "2.0",
+  "name": "SENG438-Assign4",
+  "url": "https://www.costco.ca",
+  "tests": [{
+    "id": "a103e450-44c2-4c89-b537-5892ceb5ce47",
+    "name": "Add item to cart",
+    "commands": [{
+      "id": "6ae8ea7c-a537-46b0-8aae-f454923e9d35",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ebe36498-26e5-4f0e-8f3f-dfe4454f7e3f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1038x844",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "daae3029-c96d-4a10-9ea8-65ee345d507a",
+      "comment": "",
+      "command": "click",
+      "target": "id=search-field",
+      "targets": [
+        ["id=search-field", "id"],
+        ["css=#search-field", "css:finder"],
+        ["xpath=//input[@id='search-field']", "xpath:attributes"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//span[2]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "382f49cf-c822-44e8-b640-e97cf0af38d9",
+      "comment": "",
+      "command": "type",
+      "target": "id=search-field",
+      "targets": [
+        ["id=search-field", "id"],
+        ["css=#search-field", "css:finder"],
+        ["xpath=//input[@id='search-field']", "xpath:attributes"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//span[2]/input[2]", "xpath:position"]
+      ],
+      "value": "bread"
+    }, {
+      "id": "983e5586-7d37-4df7-b8d3-a8a04ec13f9a",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=search-field",
+      "targets": [
+        ["id=search-field", "id"],
+        ["css=#search-field", "css:finder"],
+        ["xpath=//input[@id='search-field']", "xpath:attributes"],
+        ["xpath=//form[@id='formcatsearch']/div[2]/span[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//span[2]/input[2]", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "361481ce-e542-48a5-b4b5-e891e2179f60",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=addbutton-0",
+      "targets": [],
+      "value": "Add"
+    }, {
+      "id": "7ffceab9-4687-4e57-a90d-e1db731b0dcf",
+      "comment": "",
+      "command": "click",
+      "target": "id=addbutton-0",
+      "targets": [
+        ["id=addbutton-0", "id"],
+        ["name=add-to-cart", "name"],
+        ["css=#addbutton-0", "css:finder"],
+        ["xpath=//button[@id='addbutton-0']", "xpath:attributes"],
+        ["xpath=//div[@id='addButtonContainer-0']/button", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "6bc452c8-6b24-4345-9d85-ec0d009683bb",
+    "name": "Add item to cart -browse",
+    "commands": [{
+      "id": "c37220de-095c-4a9c-8e4e-3054d37e8f31",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "919c00fd-8f98-49e2-a2e8-42512cdc75e6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1091x844",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "56089d28-0e3d-4dc2-b22a-9c2208d3c144",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Kirkland Signature",
+      "targets": [
+        ["linkText=Kirkland Signature", "linkText"],
+        ["css=#Home_Ancillary_Popover_0-container .col-xs-6:nth-child(1) .sub-item:nth-child(2) > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'Kirkland Signature')])[3]", "xpath:link"],
+        ["xpath=//div[@id='Home_Ancillary_Popover_0-container']/div/div/ol/li[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/kirkland-signature-products.html')])[3]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div/ol/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae270f55-6cf2-47b5-8356-b855cecfa377",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=addbutton-3",
+      "targets": [
+        ["id=addbutton-3", "id"],
+        ["css=#addbutton-3", "css:finder"],
+        ["xpath=//button[@id='addbutton-3']", "xpath:attributes"],
+        ["xpath=//div[@id='addButtonContainer-3']/button", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div[3]/div/div/form/div/div/div/div/div[2]/button", "xpath:position"]
+      ],
+      "value": "Add"
+    }, {
+      "id": "303752c4-eda7-45b3-8fa8-21e093a7f72c",
+      "comment": "",
+      "command": "click",
+      "target": "id=addbutton-3",
+      "targets": [
+        ["id=addbutton-3", "id"],
+        ["css=#addbutton-3", "css:finder"],
+        ["xpath=//button[@id='addbutton-3']", "xpath:attributes"],
+        ["xpath=//div[@id='addButtonContainer-3']/button", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div[3]/div/div/form/div/div/div/div/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "9527401d-8e62-4c80-9040-282913e93af3",
+    "name": "Change Country",
+    "commands": [{
+      "id": "c9d74ddd-d931-4efd-8733-936013f8d9b1",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.costco.com.mx/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aa6140fe-0b0b-40f5-8d0e-ec5a242c18f0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "828x844",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f653a3ae-08ec-46e9-8d9f-0ad9413a0bfd",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.country-flags-component > #languageMenuTrigger",
+      "targets": [],
+      "value": "Mexico"
+    }, {
+      "id": "997c605d-4836-411a-a1ce-883789d03234",
+      "comment": "",
+      "command": "click",
+      "target": "css=.country-flags-component > #languageMenuTrigger",
+      "targets": [
+        ["css=.country-flags-component > #languageMenuTrigger", "css:finder"],
+        ["xpath=(//button[@id='languageMenuTrigger'])[2]", "xpath:attributes"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Mexico ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c10cf855-d702-414d-bde2-bebb6cac3d51",
+      "comment": "",
+      "command": "click",
+      "target": "css=.country-flags-component > #languageMenuTrigger",
+      "targets": [
+        ["css=.country-flags-component > #languageMenuTrigger", "css:finder"],
+        ["xpath=(//button[@id='languageMenuTrigger'])[2]", "xpath:attributes"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Mexico ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ffd197d9-72d2-4918-bb0e-e344330a1b88",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-star-inserted:nth-child(3) > .js-country-selector > .text-body",
+      "targets": [
+        ["css=.ng-star-inserted:nth-child(3) > .js-country-selector > .text-body", "css:finder"],
+        ["xpath=//div[@id='country-select-dropdown']/ul/li[3]/a/span", "xpath:idRelative"],
+        ["xpath=//li[3]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Canada')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "0552bfc9-78a5-4e53-8ac1-1d7a61fde2ca",
+    "name": "Change Language",
+    "commands": [{
+      "id": "f496b81b-7048-4dd7-8361-1555b5e8eb8d",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6b56a28d-e58a-455c-a32d-4347977ee4ec",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "828x844",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0d1cc22d-6fd5-4c41-8d9f-29eb3feddb1d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Français",
+      "targets": [
+        ["linkText=Français", "linkText"],
+        ["css=#language-select-popover-container li:nth-child(2) a", "css:finder"],
+        ["xpath=//a[contains(text(),'Français')]", "xpath:link"],
+        ["xpath=//div[@id='language-select-popover-container']/ul/li[2]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0);')])[4]", "xpath:href"],
+        ["xpath=//li[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Français')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b40dfadf-3997-459d-93c9-259cf81d8fd4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=English",
+      "targets": [
+        ["linkText=English", "linkText"],
+        ["css=#language-select-popover-container li:nth-child(1) a", "css:finder"],
+        ["xpath=//a[contains(text(),'English')]", "xpath:link"],
+        ["xpath=//div[@id='language-select-popover-container']/ul/li/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0);')])[3]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'English')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ea23125-8b11-49fe-8580-93301cf73d1d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Mexico",
+      "targets": [
+        ["linkText=Mexico", "linkText"],
+        ["css=#country-select-popover-container li:nth-child(4) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Mexico')]", "xpath:link"],
+        ["xpath=//div[@id='country-select-popover-container']/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.costco.com.mx')]", "xpath:href"],
+        ["xpath=//div/ul/li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Mexico')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3acd3bd1-1142-4144-aef0-5e9f1a241969",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Inicio | Costco México",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "5c0e2a65-269d-421b-b0a4-893f2018f30a",
+    "name": "Add item and remove item",
+    "commands": [{
+      "id": "7f83f2c4-3118-4ab1-a345-a4a78d5004d9",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc40e258-2b1b-46d1-a1d2-617c88e1fcdb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1099x844",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "81731f40-b211-497f-9cb1-d3721816f11f",
+      "comment": "",
+      "command": "click",
+      "target": "id=Home_Ancillary_0",
+      "targets": [
+        ["id=Home_Ancillary_0", "id"],
+        ["linkText=Grocery", "linkText"],
+        ["css=#Home_Ancillary_0", "css:finder"],
+        ["xpath=(//a[contains(text(),'Grocery')])[6]", "xpath:link"],
+        ["xpath=//a[@id='Home_Ancillary_0']", "xpath:attributes"],
+        ["xpath=//div[@id='navigation-widget']/div/nav/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/grocery-household.html')])[7]", "xpath:href"],
+        ["xpath=//nav/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "09ea262d-3e1b-42a8-806c-184f43d40a87",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Kirkland Signature",
+      "targets": [
+        ["linkText=Kirkland Signature", "linkText"],
+        ["css=#Home_Ancillary_Popover_0-container .col-xs-6:nth-child(1) .sub-item:nth-child(2) > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'Kirkland Signature')])[3]", "xpath:link"],
+        ["xpath=//div[@id='Home_Ancillary_Popover_0-container']/div/div/ol/li[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/kirkland-signature-products.html')])[3]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div/ol/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "77868330-e1e3-4999-9fba-cf1c61249abb",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.css-1jvjmvl > .MuiButtonBase-root",
+      "targets": [
+        ["css=.css-1jvjmvl > .MuiButtonBase-root", "css:finder"],
+        ["xpath=(//button[@type='button'])[3]", "xpath:attributes"],
+        ["xpath=//nav[@id='deliveryLocation']/div/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'M4V 2H7')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b81ef4de-a341-4a82-80c6-65a15a3bf938",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Kirkland Signature Organic Breakfast Blend Fair Trade K-Cup Pods, 120-pack",
+      "targets": [
+        ["linkText=Kirkland Signature Organic Breakfast Blend Fair Trade K-Cup Pods, 120-pack", "linkText"],
+        ["css=.col-xs-6:nth-child(8) .description > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Kirkland Signature Organic Breakfast Blend Fair Trade K-Cup Pods, 120-pack')]", "xpath:link"],
+        ["xpath=//div[@id='search-results']/div[4]/div[6]/div/div[2]/div[2]/span/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www.costco.ca/kirkland-signature-organic-breakfast-blend-fair-trade-k-cup-pods%2c-120-pack.product.100794422.html')])[2]", "xpath:href"],
+        ["xpath=//div[6]/div/div[2]/div[2]/span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Kirkland Signature Organic Breakfast Blend Fair Trade K-Cup Pods, 120-pack')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d4e61d2-e631-4581-868e-4bee05713743",
+      "comment": "",
+      "command": "click",
+      "target": "id=add-to-cart-btn",
+      "targets": [
+        ["id=add-to-cart-btn", "id"],
+        ["name=add-to-cart", "name"],
+        ["css=#add-to-cart-btn", "css:finder"],
+        ["xpath=//input[@id='add-to-cart-btn']", "xpath:attributes"],
+        ["xpath=//div[@id='add-to-cart']/input", "xpath:idRelative"],
+        ["xpath=//ul/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "abd40e03-d698-4a68-89fd-6b5ce2636b3d",
+      "comment": "",
+      "command": "click",
+      "target": "css=a > .btn",
+      "targets": [
+        ["css=a > .btn", "css:finder"],
+        ["xpath=//div[@id='costcoModalText']/div[2]/div[2]/a/button", "xpath:idRelative"],
+        ["xpath=//a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'View Cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e53198e3-654a-44d7-b1c9-a31977959e8c",
+      "comment": "",
+      "command": "click",
+      "target": "id=remove-serial_1926592132",
+      "targets": [
+        ["id=remove-serial_1926592132", "id"],
+        ["css=#remove-serial_1926592132", "css:finder"],
+        ["xpath=//span[@id='remove-serial_1926592132']", "xpath:attributes"],
+        ["xpath=//div[@id='order-item_3']/div/div[3]/div/div/div/div/button/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "49c42e86-2ef1-469e-bc59-c26e61d410e2",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "5bc0e682-57f3-43d4-9bc0-6b9e8cfe099f",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://www.costco.ca/"],
+  "plugins": []
+}
